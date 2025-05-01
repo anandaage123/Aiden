@@ -23,15 +23,19 @@ define('WP_STORE_SELECTOR_PLUGIN_URL', plugin_dir_url(__FILE__));
 // Include required files
 require_once WP_STORE_SELECTOR_PLUGIN_DIR . 'includes/class-wp-store-selector.php';
 
-// Initialize the plugin
+/**
+ * Initialize the plugin
+ */
 function wp_store_selector_init() {
     $plugin = new WP_Store_Selector();
     $plugin->init();
 }
 add_action('plugins_loaded', 'wp_store_selector_init');
 
-// Activation hook
-register_activation_hook(__FILE__, 'wp_store_selector_activate');
+/**
+ * Plugin activation hook
+ * Sets up default store options
+ */
 function wp_store_selector_activate() {
     // Add default store options
     $default_stores = array(
@@ -48,9 +52,13 @@ function wp_store_selector_activate() {
     );
     update_option('wp_store_selector_options', $default_stores);
 }
+register_activation_hook(__FILE__, 'wp_store_selector_activate');
 
-// Deactivation hook
-register_deactivation_hook(__FILE__, 'wp_store_selector_deactivate');
+/**
+ * Plugin deactivation hook
+ * Cleanup if needed
+ */
 function wp_store_selector_deactivate() {
     // Cleanup if needed
-} 
+}
+register_deactivation_hook(__FILE__, 'wp_store_selector_deactivate'); 

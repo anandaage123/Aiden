@@ -1,6 +1,9 @@
 <?php
 /**
  * Main plugin class
+ * 
+ * @package WP_Store_Selector
+ * @version 1.0.0
  */
 class WP_Store_Selector {
     /**

@@ -1,15 +1,21 @@
+/**
+ * WP Store Selector JavaScript
+ * Version: 1.0.0
+ */
 jQuery(document).ready(function($) {
-    // Add any custom JavaScript functionality here
-    // For example, you could add validation or dynamic behavior
-    
-    // Example: Add a class to the store select when it's focused
+    /**
+     * Add focus/blur effects to store selection dropdown
+     */
     $('#user_store').on('focus', function() {
         $(this).addClass('focused');
     }).on('blur', function() {
         $(this).removeClass('focused');
     });
     
-    // Example: Add validation before form submission
+    /**
+     * Form validation before submission
+     * Ensures a store is selected before allowing form submission
+     */
     $('form.register').on('submit', function(e) {
         var storeSelect = $('#user_store');
         if (!storeSelect.val()) {

@@ -1,4 +1,9 @@
-/* Store Selector Styles */
+/* 
+ * WP Store Selector Styles
+ * Version: 1.0.0
+ */
+
+/* Store selection dropdown styles */
 #user_store {
     width: 100%;
     max-width: 100%;
@@ -12,22 +17,25 @@
     box-sizing: border-box;
 }
 
+/* Focus state for store selection dropdown */
 #user_store:focus {
     border-color: #2271b1;
     box-shadow: 0 0 0 1px #2271b1;
     outline: none;
 }
 
-/* Admin Settings Page Styles */
+/* Admin settings page styles */
 .wp-store-selector-settings .form-table th {
     width: 200px;
 }
 
+/* Textarea styles for store options */
 .wp-store-selector-settings textarea {
     font-family: monospace;
     line-height: 1.4;
 }
 
+/* Description text styles */
 .wp-store-selector-settings .description {
     margin-top: 5px;
     color: #666;
