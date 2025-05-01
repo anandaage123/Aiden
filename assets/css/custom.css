@@ -1,0 +1,34 @@
+/* Store Selector Styles */
+#user_store {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+#user_store:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+/* Admin Settings Page Styles */
+.wp-store-selector-settings .form-table th {
+    width: 200px;
+}
+
+.wp-store-selector-settings textarea {
+    font-family: monospace;
+    line-height: 1.4;
+}
+
+.wp-store-selector-settings .description {
+    margin-top: 5px;
+    color: #666;
+} 
